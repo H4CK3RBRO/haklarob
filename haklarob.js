@@ -18,7 +18,7 @@ for (const file of commandFiles) {
 
 client.on("error", console.error);
 
-client.off('ready', () => {
+client.on('ready', () => {
     console.log('Bot Aktif :) Created By: Yusuf Ahmet Eden')
     const durumlar = [
       "Hergün Daha Da Gelişen Bot.",
@@ -35,7 +35,7 @@ client.off('ready', () => {
     }, 5000);
 });
 
-client.on('ready', () => {
+client.off('ready', () => {
     console.log('Bot Aktif :) Created By: Yusuf Ahmet Eden')
     client.user.setActivity('Şuan Büyük Bir Bakımda... Birazdan Tam hizmete Sunulacaktır.')
 });
