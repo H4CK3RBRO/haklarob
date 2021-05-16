@@ -1,4 +1,3 @@
-require('ytdl-core')
 const player = require('discordjs-ytdl-advanced')
 const { MessageEmbed } = require('discord.js')
 module.exports = {
