@@ -6,8 +6,8 @@ module.exports = {
     if (!args[0]) return message.channel.send('Lütfen Bir Şarkı adı Giriniz.');
     if (message.member.voice.channel){
       const connection = await message.member.voice.channel.join()
-      const şarkı = await player(args.join(" "))
-      şarkı.play(connection)
+      const song = await player(args.join(" "))
+      song.play(connection)
       const embed = new MessageEmbed()
       .setTitle('Şarkı Bulundu:\n ')
       .setDescription(`**Video**: **[${şarkı.title}](${şarkı.url})**`)
