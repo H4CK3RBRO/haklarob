@@ -8,15 +8,7 @@ module.exports = {
       const connection = await message.member.voice.channel.join()
       const song = await player(args.join(" "))
       song.play(connection)
-      const embed = new MessageEmbed()
-      .setTitle('Şarkı Bulundu:\n ')
-      .setDescription(`**Video**: **[${şarkı.title}](${şarkı.url})**`)
-      .setThumbnail(şarkı.thumbnail)
-      .addField('Video açıklaması: ', `${şarkı.description}`)
-      .addField("Video Link'i", `**${şarkı.url}**`)
-      .addField("Video Süresi", `**${şarkı.time}**`)
-      .setColor("YELLOW")
-      message.channel.send(embed)
+      message.channel.send(`${şarkı.title}`)
     } else {
       message.reply('Lütfen bir sesli kanala katılınız.')
     }
