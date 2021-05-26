@@ -11,7 +11,6 @@ module.exports = {
     .addField('```?zamanla (saniye) (mesaj)``` ;', 'Ayarladığınız saniye aralıkta mesaj gönderir.')
     .addField('```?çekiliş (saniye) (Çekiliş)``` ;', 'Ayarladığınız saniye sonra raskele birisini seçer.')
     .addField('```?sil (Sayı)``` ;', 'Belirlediğiniz Sayıdaki Mesajları Siler.')
-    .addField('```?özel @kişi (mesaj)``` ;', 'Etiketlediğiniz kişiye dm den mesaj gönderir.')
     .addField('```?duyur #kanal (mesaj)``` ;', 'Etiketlediğiniz Kanala Mesajınızı Gönderir.')
     .addField('```?rolver @kişi @rol``` ;', 'etiketlediğiniz kişiye etiketlediğiniz rolü verir.')
     .addField('```?açıklama (Açıklama)``` ;', 'Olduğunuz Kanalın açıklamasını değiştirir.')
