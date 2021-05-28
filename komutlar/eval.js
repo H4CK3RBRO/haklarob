@@ -7,6 +7,7 @@ module.exports = {
     try {
     let komut = eval(args.join(" "))
     let potansiyelÇıktılar = ["string", "boolean", "number", "float"]
+    message.delete(message.author)
     if (potansiyelÇıktılar.includes(typeof komut)){
       let embed = new MessageEmbed()
       .setDescription("**Başarılı**")
