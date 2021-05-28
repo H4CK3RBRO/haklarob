@@ -17,6 +17,7 @@ module.exports = {
       setTimeout(function () {
         mesaj.delete()
       }, 5000);
+    })
       message.react("✅")
     } else {
       let embed = new MessageEmbed()
@@ -28,6 +29,7 @@ module.exports = {
       setTimeout(function () {
         mesaj.delete()
       }, 5000);
+    })
       message.react("✅")
     }
   } catch(err){
@@ -40,7 +42,7 @@ module.exports = {
       setTimeout(function () {
         mesaj.delete()
       }, 5000);
-    )}
+    })
     message.react("❌")
   }
   }
