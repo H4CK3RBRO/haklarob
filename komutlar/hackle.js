@@ -3,7 +3,7 @@ module.exports = {
   async run (client, message, args){
     const {MessageEmbed} = require('discord.js')
     let kişiargs = message.content.split(' ').slice(1)
-    let kişi = ödülargs.join(" ")
+    let kişi = kişiargs.join(" ")
     if (isNaN(time)) return;
     const embed1 = new MessageEmbed()
     .setTitle('👨‍💻 Hackleme İşlemi Başladı.')
