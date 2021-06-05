@@ -76,12 +76,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowerCase() === 'kim') {
-    message.channel.send('o');
-  }
-});
-
-client.on('message', message => {
   if (message.content.toLowerCase() === 'nabıyon') {
     message.channel.send('İyiyim Bea,Sen napıyon');
   }
@@ -91,35 +85,6 @@ client.on('message', message => {
   if (message.content.toLowerCase() === 'iyi geceler') {
     message.react('🌇')
     message.channel.send('Sanada iyi Geceler');
-  }
-});
-
-client.on('message', message => {
-  if (message.content.toLowerCase() === 'davet') {
-    message.delete(message.author)
-    message.reply('HAKLAROB DAVET LİNKİ;https://discord.com/oauth2/authorize?client_id=834335937709735956&scope=bot&permissions=8')
-  }
-});
-
-client.on('message', message => {
-  if (message.content.toLowerCase() === 'salak') {
-    message.delete()
-    const { MessageEmbed } = require('discord.js')
-    const embed = new MessageEmbed()
-    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
-    .setColor('RED')
-    message.author.send('Lütfen Kurallara Uy!')
-  }
-});
-
-client.on('message', message => {
-  if (message.content.toLowerCase() === 'mal') {
-    message.delete()
-    const { MessageEmbed } = require('discord.js')
-    const embed = new MessageEmbed()
-    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
-    .setColor('RED')
-    message.author.send(embed)
   }
 });
 
