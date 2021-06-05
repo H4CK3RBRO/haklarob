@@ -146,18 +146,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowerCase() === 'sik') {
-    message.delete()
-    const { MessageEmbed } = require('discord.js')
-    const embed = new MessageEmbed()
-    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
-    .setColor('RED')
-    message.author.send(embed)
-  }
-});
-
-client.on('message', message => {
-  if (message.content.toLowerCase() === 'mal') {
+  if (message.content.toLowerCase() === 'amk') {
     message.delete()
     const { MessageEmbed } = require('discord.js')
     const embed = new MessageEmbed()
