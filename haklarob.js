@@ -7,7 +7,7 @@ const { join } = require('path');
 
 client.commands= new Discord.Collection();
 
-const prefix = "?"
+const prefix = işaret
 
 const commandFiles = readdirSync(join(__dirname, "komutlar")).filter(file => file.endsWith(".js"));
 
@@ -29,6 +29,7 @@ client.on('ready', () => {
       "Önerilerinizi Bizimle Paylaşabilirsiniz.",
       "Hedef Sunucu: 75",
       "?yardım",
+      "Sunucu Sayısı: " client.guilds.cache.size,
     ]
     setInterval(function () {
       let durum = durumlar[Math.floor(Math.random()*durumlar.length)]
@@ -48,7 +49,7 @@ client.on("message", async message => {
     if(message.content.startsWith(prefix)) {
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         const command = args.shift().toLowerCase();
-        if(!client.commands.has(command)) return message.channel.send(`Komut dosyamda **${command}** adlı bir komut bulamadım.`);
+        if(!client.commands.has(command)) return message.channel.send(`Komut dosyamda **${command}** adlı bir komut bulamadım. Hemen Geliştiricime Bildir.`);
         try {
             client.commands.get(command).run(client, message, args);
         } catch (error){
@@ -82,7 +83,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowerCase() === 'Nabıyon') {
+  if (message.content.toLowerCase() === 'nabıyon') {
     message.channel.send('İyiyim Bea,Sen napıyon');
   }
 });
@@ -96,7 +97,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content.toLowerCase() === 'davet') {
-    message.delete()
+    message.delete(message.author)
     message.reply('HAKLAROB DAVET LİNKİ;https://discord.com/oauth2/authorize?client_id=834335937709735956&scope=bot&permissions=8')
   }
 });
@@ -123,19 +124,48 @@ client.on('message', message => {
   }
 });
 
-client.on("guildMemberAdd", member => {
-  let role = member.guild.roles.cache.find(role => role.name === 'kayıtsız');
-  member.roles.add(role)
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'siktir') {
+    message.delete()
+    const { MessageEmbed } = require('discord.js')
+    const embed = new MessageEmbed()
+    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
+    .setColor('RED')
+    message.author.send(embed)
+  }
 });
 
-client.on('guildMemberRemove', member => {
-  const girişçıkış = member.guild.channels.cache.find(channel => channel.name === 'gelen-giden');
-  girişçıkış.send(` ${member} Sunucumuzdan Ayrıldı, Üye Sayısı ${member.guild.memberCount} Kişi, Hedef ${hedef}`);
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'oç') {
+    message.delete()
+    const { MessageEmbed } = require('discord.js')
+    const embed = new MessageEmbed()
+    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
+    .setColor('RED')
+    message.author.send(embed)
+  }
 });
 
-client.on('guildMemberAdd', member => {
-  const girişçıkış = member.guild.channels.cache.find(channel => channel.name === 'gelen-giden');
-  girişçıkış.send(` ${member} Sunucumuza Hoşgeldin, Seninle Beraber ${member.guild.memberCount} Kişiyiz, Hedef Üye sayısı ${hedef}`);
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'sik') {
+    message.delete()
+    const { MessageEmbed } = require('discord.js')
+    const embed = new MessageEmbed()
+    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
+    .setColor('RED')
+    message.author.send(embed)
+  }
+});
+
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'mal') {
+    message.delete()
+    const { MessageEmbed } = require('discord.js')
+    const embed = new MessageEmbed()
+    .setTitle('Lütfen Kurallara Uyarak Argo Kelime Kullanma! ')
+    .setColor('RED')
+    message.author.send(embed)
+  }
 });
 
 client.login('ODM0MzM1OTM3NzA5NzM1OTU2.YH_Z5A.IAMTK2gRRgNuqS5q0gRQKz_1cuU');
