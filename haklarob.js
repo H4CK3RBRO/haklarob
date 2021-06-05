@@ -29,7 +29,6 @@ client.on('ready', () => {
       "Önerilerinizi Bizimle Paylaşabilirsiniz.",
       "Hedef Sunucu: 75",
       "?yardım",
-      "Sunucu Sayısı: " client.guilds.cache.size,
     ]
     setInterval(function () {
       let durum = durumlar[Math.floor(Math.random()*durumlar.length)]
