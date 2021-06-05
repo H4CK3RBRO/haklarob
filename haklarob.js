@@ -7,7 +7,7 @@ const { join } = require('path');
 
 client.commands= new Discord.Collection();
 
-const prefix = işaret
+const prefix = "?"
 
 const commandFiles = readdirSync(join(__dirname, "komutlar")).filter(file => file.endsWith(".js"));
 
