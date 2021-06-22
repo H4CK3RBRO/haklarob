@@ -12,23 +12,22 @@ module.exports = {
       member
         .ban('Denetim günlüklerinde görüntülenecek isteğe bağlı neden')
         .then(() => {
-          const kanal = message.guild.channels.cache.find(ch => ch.id === '739824165703385138')
           const embed = new MessageEmbed()
           .setTitle('LOG OLAYI')
           .setDescription('Olay: `Ban`')
           .addField('Üye:', member)
           .addField('Neden:', neden)
-          kanal.send(embed)
+          message.channel.send(embed)
         })
         .catch(err => {
-          message.reply('Üyeyi atamadım');
+          message.reply("Üyeyi ban'layamadım");
           console.error(err);
         });
     } else {
-      message.reply("Bu kullanıcı bu loncada değil!");
+      message.reply("Kullanıcı bu Sunucuda değil!");
     }
   } else {
-    message.reply("Kullanıcıdan tekme atmasını söylemedin!");
+    message.reply("Kullanıcıya ban atmasını söylemedin!");
   }
   }
 };
