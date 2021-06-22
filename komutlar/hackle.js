@@ -15,7 +15,7 @@ module.exports = {
     message.channel.send(embed1).then(embed => {
     setTimeout(function () {
       embed.edit(embed2)
-    }, 1 * 1000);
+    }, 5 * 1000);
   })
   }
 }
