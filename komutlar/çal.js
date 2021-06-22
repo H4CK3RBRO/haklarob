@@ -10,7 +10,7 @@ module.exports = {
       şarkı.play(connection)
       const embed = new MessageEmbed()
       .setTitle('Şarkı Bulundu :)')
-      .setDescription('Şarkı:' şarkı.title)
+      .setDescription(şarkı.title)
       .setThumbnail(şarkı.thumbnail)
       message.channel.send(embed)
     } else {
