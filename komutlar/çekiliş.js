@@ -7,13 +7,13 @@ module.exports = {
     let ödül = ödülargs.join(" ")
     if (isNaN(time)) return;
     const embed1 = new MessageEmbed()
-    .setTitle('Çekiliş Başladı')
+    .setTitle('🎉 Çekiliş Başladı 🎉')
     .setDescription(ödül)
     .setFooter('Çekiliş ' + time + ' saniye sonra açıklanacaktır.')
     const embed2 = new MessageEmbed()
     .setDescription('Çekiliş Bitti Kazanan - <@' + message.guild.members.cache.random() + '>')
     .setTitle(ödül)
-    .setFooter('Tebrikler')
+    .setFooter('🎉 Tebrikler 🎉')
     message.channel.send(embed1).then(embed => {
     setTimeout(function () {
       embed.edit(embed2)
