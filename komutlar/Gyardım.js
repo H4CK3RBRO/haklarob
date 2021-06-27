@@ -1,5 +1,5 @@
 module.exports = {
-  kod: "g-yardım",
+  kod: "genel",
   async run (client, message, args) {
     const { MessageEmbed } = require('discord.js')
     const embed = new MessageEmbed()
