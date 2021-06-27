@@ -8,6 +8,7 @@ module.exports = {
     .addField('```?ban @kişi (neden)``` ;', 'Etiketlenen kişiyi Sunucudan engeller.')
     .addField('```?unban ID``` ;', 'Banlanan Kişinin Engelini kaldırır.')
     .addField('```?kick @kişi (neden)``` ;', 'Etiketlenen kişiyi sunucudan atar. ')
+    .addField('```?nuke``` ;', 'Kanalı Tamamen silip tekrardan oluşturur.')
     .addField('```?çekiliş (Dakika) (Çekiliş adı)``` ;', 'Ayarladığınız dakika sonra raskele birisini seçer.')
     .addField('```?sil (Sayı)``` ;', 'Kanaldaki belirlediğiniz Sayıdaki Mesajları Siler.')
     .addField('```?duyur #kanal (mesaj)``` ;', 'Etiketlediğiniz Kanala Mesajınızı Gönderir.')
