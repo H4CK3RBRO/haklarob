@@ -7,7 +7,7 @@ module.exports = {
   async run (client, message) {
     const embed = new MessageEmbed()
     .setTitle('İstatistikler')
-    .setDescription('Botun kaç sunucuda kaç kanalda ve kaç kişiyle etkileşim kurabileceğinin istitastikleri')
+    .setDescription('Botun kaç sunucuda kaç kanalda ve kaç kişiyle etkileşim kurabileceğinin istatistikleri')
     .addField('Kullanıcı sayısı: ', client.users.cache.size)
     .addField('Sunucu Sayısı: ', client.guilds.cache.size)
     .addField('Kanal Sayısı: ', client.channels.cache.size)
