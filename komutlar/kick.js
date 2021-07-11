@@ -1,7 +1,8 @@
 module.exports = {
   kod: "kick",
   async run (client, message, args) {
-    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('Sen Moderatör Değilsin!')
+    if (!message.member.hasPermission('KICK_MEMBERS')) return message.channel.send('Sen Moderatör Değilsin!')
+    if (!message.guild.me.hasPermission('KICK_MEMBERS')) return message.channel.send('Benim Yetkim Yok.')
     const args1 = message.content.split(' ').slice(2)
     const neden = args1.join(" ")
     const { MessageEmbed } = require('discord.js')

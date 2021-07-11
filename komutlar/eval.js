@@ -3,7 +3,7 @@ module.exports = {
   async run (client, message, args){
     let { MessageEmbed } = require('discord.js')
     if (!args[0]) return message.channel.send('Lütfen Çalışacak kodu yazınız.')
-    if (message.author.id !== "709349764113629236") return message.channel.send("Sen Yapamazsın")
+    if (message.author.id !== "709349764113629236") return message.reply("Bu komutu ancak geliştiricim kullanabilir.")
     try {
     let komut = eval(args.join(" "))
     let potansiyelÇıktılar = ["string", "boolean", "number", "float"]

@@ -9,15 +9,15 @@ module.exports = {
     const embed1 = new MessageEmbed()
     .setTitle('🎉 Çekiliş Başladı 🎉')
     .setDescription(ödül)
-    .setFooter('Çekiliş ' + time + ' saniye sonra açıklanacaktır.')
+    .setFooter('Çekiliş ' + time + ' dakika sonra açıklanacak.')
     const embed2 = new MessageEmbed()
-    .setDescription('Çekiliş Bitti Kazanan - <@' + message.guild.members.cache.random() + '>')
+    .setDescription('🎉Çekiliş Bitti 🎉\n Kazanan: <@' + message.guild.members.cache.random() + '>')
     .setTitle(ödül)
-    .setFooter('🎉 Tebrikler 🎉')
+    .setFooter('Tebrikler :)')
     message.channel.send(embed1).then(embed => {
     setTimeout(function () {
       embed.edit(embed2)
-    }, time * 1000);
+    }, time * 10000);
   })
   }
 }

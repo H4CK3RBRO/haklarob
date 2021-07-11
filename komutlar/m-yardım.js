@@ -8,13 +8,13 @@ module.exports = {
     .addField('```?ban @kişi (neden)``` ;', 'Etiketlenen kişiyi Sunucudan engeller.')
     .addField('```?unban ID``` ;', 'Banlanan Kişinin Engelini kaldırır.')
     .addField('```?kick @kişi (neden)``` ;', 'Etiketlenen kişiyi sunucudan atar. ')
-    .addField('```?nuke``` ;', 'Kanalı Tamamen silip tekrardan oluşturur.')
     .addField('```?çekiliş (Dakika) (Çekiliş adı)``` ;', 'Ayarladığınız dakika sonra raskele birisini seçer.')
     .addField('```?sil (Sayı)``` ;', 'Kanaldaki belirlediğiniz Sayıdaki Mesajları Siler.')
     .addField('```?duyur #kanal (mesaj)``` ;', 'Etiketlediğiniz Kanala Mesajınızı Gönderir.')
     .addField('```?rolver @kişi @rol``` ;', 'etiketlediğiniz kişiye etiketlediğiniz rolü verir.')
     .addField('```?açıklama (Açıklama)``` ;', 'Kanalın açıklamasını değiştirir.')
-    .setColor("YELLOW")
+    .setColor("CYAN")
+    .setFooter('!Bazı Komutları Kullanabilmek için bota Yönetici iznini vermelisiniz!')
     message.channel.send(embed)
   }
 }

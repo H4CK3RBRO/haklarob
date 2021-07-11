@@ -8,9 +8,9 @@ module.exports = {
     message.guild.fetchBans().then(ban => {
       if (ban.size === 0) return message.reply('Hiç Kimse Banlanmamış.');
       const banlanan = ban.find(b => b.user.id === id)
-      if (!banlanan) return message.channel.send('Bu kişi Sunucudan Yasaklanmamış ki kardeşim :)');
+      if (!banlanan) return message.channel.send('Bu kişi Sunucudan yasaklanmamış.');
       message.guild.members.unban(banlanan.user)
-      message.reply('Bu kişinin Yasağı Başarıyla Kalktı')
+      message.reply('Bu kişinin Yasağı Başarıyla Kalkmıştır.')
     })
   }
 }
