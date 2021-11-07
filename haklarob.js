@@ -22,7 +22,7 @@ client.on('ready', () => {
     console.log('Bot Aktif :) Created By: Yusuf Ahmet Eden')
     const durumlar = [
       "Hergün Daha Da Gelişen Bot.",
-      "Yapımcı: HACKERBRO#0001",
+      "Yapımcı: HACKERBRO#7348",
       "https://discord.ly/haklarob",
       "Yeni Güncelleme",
       "Prefix = ?",
